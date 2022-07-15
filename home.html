@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" type="text/css" href="mywatchbin.css">
+	<script src="https://kit.fontawesome.com/5c49a9e21b.js" crossorigin="anonymous"></script>
+	
+
+	<title>Home</title>
+
+</head>
+<body>
+
+	<!-- nav bar -->
+
+	<div class="navbar">
+		<div class="logo">
+			<img src="/Users/andydang/Documents/Red Bear Technologies/MoviesDB/logo.png">
+		</div>
+	
+		<div class="input-icon">
+			<input type="text" id="search" name="search" placeholder="Search for movie or tv show">
+			<button class="icon-button">
+				<i class="fa-solid fa-magnifying-glass icon"></i>
+			</button>
+		</div>
+
+		<div class="flex">
+			<button class="button-secondary">Log in</button>
+			<button>Sign up</button>		
+		</div>
+		
+
+	</div>
+
+	<!-- banner -->
+
+	<div class="banner">
+		<div class="banner-message">
+			<h2>Welcome to myWatchbin.</h2>
+			<p>Collect your favorite movies and tv shows to share with your friends and family</p>	
+		</div>
+
+	</div>
+
+	<!-- main content -->
+
+		<main>
+			
+			<div class="main-content1">
+
+				<div class="content-header">
+					<h3>My Watchbin</h3></div>
+
+				<div class="content-cards">
+
+
+					<div>
+
+					<p id="myWatchList"></p>
+					<button class="button-secondary" onclick="document.getElementById('myWatchList').innerHTML = removeFromWatchList()"> Remove </button>
+						
+					</div>
+					
+
+				</div>
+
+				<div class="content-header">
+					<h3>Featured Movies</h3>
+				</div>
+
+				<div class="content-cards">
+
+					<div class="content-card">
+						<img src="/Users/andydang/Documents/Red Bear Technologies/MoviesDB/Movie Images/spider-man3.jpeg" class="content-image">
+						<h4 class="content-title" id="spider-man3">Spider-man: No Way Home</h4>
+						<p class="content-date">2022</p>
+						<!-- <button class="button-secondary" onclick="changeColor(document.getElementById('myWatchList'))">Change color</button> -->
+
+						<button 
+							class="button-secondary" 
+							onclick=
+							"document.getElementById('myWatchList').innerHTML = addToWatchList(document.getElementById('spider-man3').innerHTML)">
+							Add to watchbin</button>
+
+
+					</div>
+
+					<div class="content-card">
+						<img src="/Users/andydang/Documents/Red Bear Technologies/MoviesDB/Movie Images/spider-man2.jpeg" class="content-image">
+						<h4 class="content-title" id="spider-man2">Spider-man: Far From Home</h4>
+						<p class="content-date">2019</p>
+
+						<button 
+							class="button-secondary" 
+							onclick="document.getElementById('myWatchList').innerHTML = addToWatchList(document.getElementById('spider-man2').innerHTML)">
+							Add to watchbin</button>
+
+					</div>
+
+					<div class="content-card">
+						<img src="/Users/andydang/Documents/Red Bear Technologies/MoviesDB/Movie Images/doctor-strange2.jpeg" class="content-image">
+						<h4 class="content-title" id="doctor-strange2">Doctor Strange in the Multiverse of Madness</h4>
+						<!-- <div class="placeholderImage"></div> -->
+						<p class="content-date">2022</p>
+
+						<button 
+							class="button-secondary" 
+							onclick="document.getElementById('myWatchList').innerHTML = addToWatchList(document.getElementById('doctor-strange2').innerHTML)">
+							Add to watchbin</button>
+
+					</div>
+
+					<div class="content-card">
+						<img src="/Users/andydang/Documents/Red Bear Technologies/MoviesDB/Movie Images/thor4.jpeg" class="content-image">
+						<h4 class="content-title" id="thor4">Thor: Love and Thunder</h4>
+						<p class="content-date">2022</p>
+
+						<button 
+							class="button-secondary" 
+							onclick="document.getElementById('myWatchList').innerHTML = addToWatchList(document.getElementById('thor4').innerHTML)">
+							Add to watchbin</button>
+
+					</div>
+
+					<div class="content-card">
+						<img src="/Users/andydang/Documents/Red Bear Technologies/MoviesDB/Movie Images/black-widow.jpeg" class="content-image">
+						<h4 class="movieTitle">Black Widow</h4>
+						<p class="content-date">2021</p>
+
+					</div>
+
+					<div class="content-card">
+						<img src="/Users/andydang/Documents/Red Bear Technologies/MoviesDB/Movie Images/shang-chi.jpeg" class="content-image">
+						<h4 class="content-title">Shang-Chi and The Legend of the Ten Rings</h4>
+						<p class="content-date">2021</p>
+
+					</div>
+
+					<div class="content-card">
+						<img src="/Users/andydang/Documents/Red Bear Technologies/MoviesDB/Movie Images/eternals.jpeg" class="content-image">
+						<h4 class="content-title">Eternals</h4>
+						<p class="content-date">2021</p>
+
+					</div>
+
+					<div class="content-card">
+						<img src="/Users/andydang/Documents/Red Bear Technologies/MoviesDB/Movie Images/spiderman-homecoming.jpg" class="content-image">
+						<h4 class="content-title">Spider-man: Homecoming</h4>
+						<p class="content-date">2018</p>
+
+					</div>
+				</div>
+			</div>
+
+			<div class="main-content2">
+				<div class="content-header">
+					<h3>Featured TV Shows</h3>
+				</div>
+
+				<div class="content-cards">
+
+					<div class="content-card">
+						<img src="/Users/andydang/Documents/Red Bear Technologies/MoviesDB/TV Show Images/moon-knight.jpeg" class="content-image">
+						<h4 class="content-title">Moon Knight</h4>
+						<p class="content-date">2022</p>
+
+					</div>
+
+					<div class="content-card">
+						<img src="/Users/andydang/Documents/Red Bear Technologies/MoviesDB/TV Show Images/loki.jpeg" class="content-image">
+						<h4 class="content-title">Loki</h4>
+						<p class="content-date">2019</p>
+
+					</div>
+
+					<div class="content-card">
+						<img src="/Users/andydang/Documents/Red Bear Technologies/MoviesDB/TV Show Images/wanda-vision.jpeg" class="content-image">
+						<h4 class="content-title">Wanda Visison</h4>
+						<p class="content-date">2022</p>
+
+					</div>
+
+					<div class="content-card">
+						<img src="/Users/andydang/Documents/Red Bear Technologies/MoviesDB/TV Show Images/falcon-and-winter-soldier.jpg" class="content-image">
+						<h4 class="content-title">The Falcon and The Winter Soldier</h4>
+						<p class="content-date">2022</p>
+
+					</div>
+
+					<div class="content-card">
+						<img src="/Users/andydang/Documents/Red Bear Technologies/MoviesDB/TV Show Images/hawkeye.jpg" class="content-image">
+						<h4 class="content-title">Hawkeye</h4>
+						<p class="content-date">2021</p>
+
+					</div>
+
+					<div class="content-card">
+						<img src="/Users/andydang/Documents/Red Bear Technologies/MoviesDB/TV Show Images/what-if.jpeg" class="content-image">
+						<h4 class="content-title">What-if</h4>
+						<p class="content-date">2021</p>
+
+					</div>
+
+					<div class="content-card">
+						<img src="/Users/andydang/Documents/Red Bear Technologies/MoviesDB/TV Show Images/ms-marvel.webp" class="content-image">
+						<h4 class="content-title">Ms. Marvel</h4>
+						<p class="content-date">2022</p>
+
+					</div>
+
+					<div class="content-card">
+						<img src="/Users/andydang/Documents/Red Bear Technologies/MoviesDB/TV Show Images/she-hulk.jpeg" class="content-image">
+						<h4 class="content-title">She Hulk</h4>
+						<p class="content-date">2022</p>
+
+					</div>
+				</div>		
+			</div>
+
+			<div class="list1">
+					<h4>Trending</h4>
+
+					<div class="content-card flex">
+						<p>1</p>
+						<img src="/Users/andydang/Documents/Red Bear Technologies/MoviesDB/Movie Images/doctor-strange2.jpeg" class="content-image">
+
+						<div class="content-details">
+							<h5 class="content-title">Doctor Strange in the Multiverse of Madness</h5>
+							<p class="content-date">2022</p>					
+						</div>
+
+					</div>
+
+					<div class="content-card flex">
+						<p>2</p>
+						<img src="/Users/andydang/Documents/Red Bear Technologies/MoviesDB/TV Show Images/moon-knight.jpeg" class="content-image">
+
+						<div class="content-details">
+							<h5 class="content-title">Moon Knight</h5>
+							<p class="content-date">2022</p>					
+						</div>
+
+					</div>
+
+					<div class="content-card flex">
+						<p>3</p>
+						<img src="/Users/andydang/Documents/Red Bear Technologies/MoviesDB/Movie Images/spider-man3.jpeg" class="content-image">
+
+						<div class="content-details">
+							<h5 class="content-title">Spider-man: No Way Home</h5>
+							<p class="content-date">2021</p>					
+						</div>
+
+					</div>
+			</div>
+
+			<div class="list2">
+					<h4>Top Charts</h4>
+
+					<div class="content-card flex">
+						<p>1</p>
+						<img src="/Users/andydang/Documents/Red Bear Technologies/MoviesDB/Movie Images/doctor-strange2.jpeg" class="content-image">
+
+						<div class="content-details">
+							<h5 class="content-title">Doctor Strange in the Multiverse of Madness</h5>
+							<p class="content-date">2022</p>					
+						</div>
+
+					</div>
+
+					<div class="content-card flex">
+						<p>2</p>
+						<img src="/Users/andydang/Documents/Red Bear Technologies/MoviesDB/TV Show Images/moon-knight.jpeg" class="content-image">
+
+						<div class="content-details">
+							<h5 class="content-title">Moon Knight</h5>
+							<p class="content-date">2022</p>					
+						</div>
+
+					</div>
+
+					<div class="content-card flex">
+						<p>3</p>
+						<img src="/Users/andydang/Documents/Red Bear Technologies/MoviesDB/Movie Images/spider-man3.jpeg" class="content-image">
+
+						<div class="content-details">
+							<h5 class="content-title">Spider-man: No Way Home</h5>
+							<p class="content-date">2021</p>					
+						</div>
+
+					</div>
+			</div>
+
+			<div class="content-cards">
+				
+				<p id="movieList"></p>
+
+				<h4 id="movieTitle"></h4>
+				<p id="movieDate"></p>
+
+
+			</div>
+
+		</main>
+
+<script src="mywatchbin.js"></script>
+
+</body>
+</html>
