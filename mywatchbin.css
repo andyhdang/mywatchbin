@@ -103,7 +103,7 @@
 	/* banners and headers*/
 
 	.banner {
-		background-image: url(movie-banner4.png);
+		background: url("movie-banner4.png");
 		background-size: cover;
 		background-repeat: no-repeat;
 
