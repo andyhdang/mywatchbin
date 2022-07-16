@@ -3,12 +3,12 @@ const watchList = [];
 
 
 function displayWatchList(){
-	return watchList;
+	return watchList.join("");
 }
 
 
 function addToWatchList(movieToAdd){
-	watchList.push(movieToAdd);
+	watchList.push("-" + movieToAdd + "<br>");
 	return watchList;
 
 }
@@ -79,6 +79,16 @@ for (let key in allMarvelMovies) {
 
 
 // var spidermanMovies = [spiderman1.title, spiderman2.title, spiderman3.title];
+
+
+function copy(){
+	var cb = document.getElementById("cb");
+	cb.value = watchList;
+	cb.style.display ='block';
+	cb.select();
+	document.execCommand('copy');
+	cb.style.display ='none';
+}
 
 
 

@@ -17,7 +17,7 @@
 
 	<div class="navbar">
 		<div class="logo">
-			<img src="logo.png">
+			<img src="/Users/andydang/Documents/Red Bear Technologies/MoviesDB/logo.png">
 		</div>
 	
 		<div class="input-icon">
@@ -61,6 +61,8 @@
 
 					<p id="myWatchList"></p>
 					<button class="button-secondary" onclick="document.getElementById('myWatchList').innerHTML = removeFromWatchList()"> Remove </button>
+					<button class="button-secondary" onclick="copy()">Copy</button>
+					<input type="text" id="cb" hidden>
 						
 					</div>
 					
@@ -71,11 +73,13 @@
 					<h3>Featured Movies</h3>
 				</div>
 
+
 				<div class="content-cards">
 
 					<div class="content-card">
-						<img src="Movie Images/spider-man3.jpeg" class="content-image">
-						<h4 class="content-title" id="spider-man3">Spider-man: No Way Home</h4>
+						<img src="/Users/andydang/Documents/Red Bear Technologies/MoviesDB/Movie Images/spider-man3.jpeg" class="content-image">
+						<a href="spider-man.html"><h4 class="content-title" id="spider-man3">Spider-man: No Way Home</h4></a>
+
 						<p class="content-date">2022</p>
 						<!-- <button class="button-secondary" onclick="changeColor(document.getElementById('myWatchList'))">Change color</button> -->
 
@@ -85,6 +89,7 @@
 							"document.getElementById('myWatchList').innerHTML = addToWatchList(document.getElementById('spider-man3').innerHTML)">
 							Add to watchbin</button>
 
+						
 
 					</div>
 
@@ -303,6 +308,9 @@
 
 
 			</div>
+
+
+
 
 		</main>
 
